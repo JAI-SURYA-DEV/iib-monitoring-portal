@@ -1,0 +1,51 @@
+<div class="dashboard-container">
+
+  <!-- KPI Cards -->
+  <div class="cards-grid">
+
+    <mat-card class="kpi-card error">
+      <h6>Total Interfaces</h6>
+      <h5>125</h5>
+    </mat-card>
+
+    <mat-card class="kpi-card success">
+      <h6>Success</h6>
+      <h5>118</h5>
+    </mat-card>
+
+    <mat-card class="kpi-card warning">
+      <h6>Warning</h6>
+      <h5>4</h5>
+    </mat-card>
+
+    <mat-card class="kpi-card danger">
+      <h6>Failed</h6>
+      <h5>3</h5>
+    </mat-card>
+
+  </div>
+
+  <!-- Charts -->
+  <div class="chart-grid">
+
+    <mat-card>
+      <h2>Message Status</h2>
+      <apx-chart
+        [series]="pieSeries"
+        [chart]="pieChart"
+        [labels]="pieLabels">
+      </apx-chart>
+    </mat-card>
+
+    <mat-card>
+      <h2>Daily Transactions</h2>
+      <apx-chart
+        [series]="barSeries"
+        [chart]="barChart"
+        [xaxis]="xAxis">
+      </apx-chart>
+    </mat-card>
+
+  </div>
+
+</div>

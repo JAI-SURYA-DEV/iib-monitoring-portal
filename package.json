@@ -23,6 +23,7 @@
     "@fortawesome/fontawesome-free": "^7.2.0",
     "apexcharts": "^3.54.0",
     "file-saver": "^2.0.5",
+    "moment": "^2.30.1",
     "ng-apexcharts": "^1.8.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

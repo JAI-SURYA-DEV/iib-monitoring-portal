@@ -1,1 +1,168 @@
-<p>dashboard works!</p>
+
+<div class="dashboard-header">
+
+  <h2 class="page-title">Dashboard Overview</h2>
+
+  <button mat-raised-button>
+    Export
+  </button>
+
+</div>
+
+<!-- KPI Cards -->
+
+<div class="kpi-grid">
+
+  <mat-card class="kpi-card total">
+    <h4>Total Hits</h4>
+    <h2>12,340</h2>
+  </mat-card>
+
+  <mat-card class="kpi-card success">
+    <h4>Success Hits</h4>
+    <h2>11,980</h2>
+  </mat-card>
+
+  <mat-card class="kpi-card failure">
+    <h4>Failure Hits</h4>
+    <h2>360</h2>
+  </mat-card>
+
+  <mat-card class="kpi-card match">
+    <h4>Match %</h4>
+    <h2>97.1%</h2>
+  </mat-card>
+
+</div>
+
+<!-- Filters -->
+
+<mat-card class="filter-card">
+
+  <div class="filters">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Service</mat-label>
+      <mat-select>
+        <mat-option>Udayan</mat-option>
+        <mat-option>Sudarshana</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Source</mat-label>
+      <mat-select>
+        <mat-option>NeoCore</mat-option>
+        <mat-option>BaNCS</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button>
+      Generate
+    </button>
+
+  </div>
+
+</mat-card>
+
+<!-- Charts -->
+
+<div class="chart-grid">
+
+  <mat-card>
+
+    <h3>Hits Trend</h3>
+
+    <apx-chart
+      [series]="lineChartSeries"
+      [chart]="lineChart"
+      [xaxis]="xaxis"
+      [stroke]="stroke"
+      [dataLabels]="dataLabels">
+    </apx-chart>
+
+  </mat-card>
+
+  <mat-card>
+
+    <h3>Service Distribution</h3>
+
+    <apx-chart
+      [series]="donutSeries"
+      [chart]="donutChart"
+      [labels]="donutLabels"
+      [legend]="legend">
+    </apx-chart>
+
+  </mat-card>
+
+</div>
+
+<!-- Table -->
+
+<mat-card>
+
+  <h3>Recent Hits</h3>
+
+  <table mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef>Date</th>
+      <td mat-cell *matCellDef="let row">{{row.date}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="service">
+      <th mat-header-cell *matHeaderCellDef>Service</th>
+      <td mat-cell *matCellDef="let row">{{row.service}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="source">
+      <th mat-header-cell *matHeaderCellDef>Source</th>
+      <td mat-cell *matCellDef="let row">{{row.source}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="hits">
+      <th mat-header-cell *matHeaderCellDef>Hits</th>
+      <td mat-cell *matCellDef="let row">{{row.hits}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let row">{{row.status}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+  </table>
+
+</mat-card>
+
+
+<h2 class="page-title">Dashboard Overview</h2>
+
+<div class="kpi-grid_V0">
+
+  <mat-card class="kpi-card_V0">
+    <h4>Total Hits</h4>
+    <h2>125,340</h2>
+  </mat-card>
+
+  <mat-card class="kpi-card_V0">
+    <h4>Success Hits</h4>
+    <h2>121,000</h2>
+  </mat-card>
+
+  <mat-card class="kpi-card_V0">
+    <h4>Failure Hits</h4>
+    <h2>4,340</h2>
+  </mat-card>
+
+  <mat-card class="kpi-card_V0">
+    <h4>Match %</h4>
+    <h2>96.5%</h2>
+  </mat-card>
+
+</div>
+<!-- ---------------------------- v1 Start---------------------------- -->

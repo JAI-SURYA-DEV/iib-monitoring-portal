@@ -1,0 +1,93 @@
+<div class="sidebar" [class.collapsed]="sidebarService.collapsed()">
+
+  <div class="logo-section">
+        @if (!sidebarService.collapsed()) {
+      <h2>IIB Portal</h2>
+    }
+
+    @if (sidebarService.collapsed()) {
+      <h2>IIB</h2>
+    }
+  </div>
+
+  <ul class="menu">
+
+    <li routerLink="/dashboard" routerLinkActive="active">
+      <span class="material-icons">dashboard</span>
+      @if (!sidebarService.collapsed()) {
+        <span>Dashboard</span>
+      }
+    </li>
+
+
+
+    <li routerLink="/interfaces" routerLinkActive="active">
+      <span class="material-icons">sync_alt</span>
+      @if (!sidebarService.collapsed()) {
+        <span>Interfaces</span>
+      }
+    </li>
+
+    <li routerLink="/monitoring" routerLinkActive="active">
+      <span class="material-icons">monitor_heart</span>
+      @if (!sidebarService.collapsed()) {
+        <span>Monitoring</span>
+      }
+    </li>
+
+    <li routerLink="/exceptions" routerLinkActive="active">
+      <span class="material-icons">error_outline</span>
+      @if (!sidebarService.collapsed()) {
+        <span>Exceptions</span>
+      }
+    </li>
+
+    <li routerLink="/reports" routerLinkActive="active">
+      <span class="material-icons">analytics</span>
+      @if (!sidebarService.collapsed()) {
+        <span>Reports</span>
+      }
+    </li>
+
+    <li routerLink="/settings" routerLinkActive="active">
+      <span class="material-icons">settings</span>
+      @if (!sidebarService.collapsed()) {
+        <span>Settings</span>
+      }
+    </li>
+
+    <li routerLink="/dashboardv1" routerLinkActive="active">
+      <span class="material-icons">dashboard</span>
+        @if (!sidebarService.collapsed()) {
+        <span>Dashboard v1</span>
+      }
+    </li>
+
+    <!-- <li>
+      <span class="material-icons">sync_alt</span>
+      Interfaces
+    </li> -->
+
+    <!-- <li>
+      <span class="material-icons">monitor_heart</span>
+      Monitoring
+    </li> -->
+
+    <!-- <li>
+      <span class="material-icons">error_outline</span>
+      Exceptions
+    </li> -->
+
+    <!-- <li>
+      <span class="material-icons">analytics</span>
+      Reports
+    </li> -->
+
+    <!-- <li>
+      <span class="material-icons">settings</span>
+      Settings
+    </li> -->
+
+  </ul>
+
+</div>

@@ -1,0 +1,26 @@
+// .main-content {
+//   margin-left: 260px;
+//   padding: 20px;
+//   min-height: 100vh;
+//   background: #f5f7fa;
+// }
+
+.main-wrapper {
+  margin-left: 260px;
+  min-height: 100vh;
+  background: #f4f6f9;
+  transition: all .3s ease;
+}
+
+.page-content {
+  padding: 20px;
+}
+
+// .main-wrapper {
+//   margin-left: 260px;
+//   transition: all .3s ease;
+// }
+
+.main-wrapper.collapsed {
+  margin-left: 80px;
+}

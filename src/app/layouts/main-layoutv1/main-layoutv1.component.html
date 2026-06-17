@@ -1,0 +1,19 @@
+<!-- <app-sidebarv1></app-sidebarv1>
+
+<div class="main-content">
+
+  <router-outlet></router-outlet>
+
+</div> -->
+
+<app-sidebarv1></app-sidebarv1>
+
+<div class="main-wrapper" [class.collapsed]="sidebarService.collapsed()">
+
+  <app-headerv1></app-headerv1>
+
+  <div class="page-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
